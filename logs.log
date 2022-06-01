@@ -896,3 +896,61 @@
 2022-06-01 10:15:19,420:INFO:Plot type: parameter
 2022-06-01 10:15:19,440:INFO:Visual Rendered Successfully
 2022-06-01 10:15:20,624:INFO:plot_model() succesfully completed......................................
+2022-06-01 10:17:39,079:INFO:Initializing predict_model()
+2022-06-01 10:17:39,079:INFO:predict_model(estimator=AdaBoostRegressor(base_estimator=None, learning_rate=1.0, loss='linear',
+                  n_estimators=50, random_state=3584), probability_threshold=None, encoded_labels=True, drift_report=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.REGRESSION, display=None, drift_kwargs=None)
+2022-06-01 10:17:39,079:INFO:Checking exceptions
+2022-06-01 10:17:39,079:INFO:Preloading libraries
+2022-06-01 10:17:39,080:INFO:Preparing display monitor
+2022-06-01 10:17:41,285:INFO:Initializing save_model()
+2022-06-01 10:17:41,285:INFO:save_model(model=AdaBoostRegressor(base_estimator=None, learning_rate=1.0, loss='linear',
+                  n_estimators=50, random_state=3584), model_name=models/best_model_reg, prep_pipe_=Pipeline(memory=None,
+         steps=[('dtypes',
+                 DataTypes_Auto_infer(categorical_features=[],
+                                      display_types=True,
+                                      features_todrop=['pickup_datetime',
+                                                       'dropOff_datetime',
+                                                       'SR_Flag',
+                                                       'dispatching_base_num',
+                                                       'Affiliated_base_number'],
+                                      id_columns=[], ml_usecase='regression',
+                                      numerical_features=[], target='duration',
+                                      time_features=[])),
+                ('imputer',
+                 Simple_Imputer(categorical_...
+                ('scaling', 'passthrough'), ('P_transform', 'passthrough'),
+                ('binn', 'passthrough'), ('rem_outliers', 'passthrough'),
+                ('cluster_all', 'passthrough'),
+                ('dummy', Dummify(target='duration')),
+                ('fix_perfect', Remove_100(target='duration')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select', 'passthrough'), ('fix_multi', 'passthrough'),
+                ('dfs', 'passthrough'), ('pca', 'passthrough')],
+         verbose=False), verbose=True, kwargs={})
+2022-06-01 10:17:41,286:INFO:Adding model into prep_pipe
+2022-06-01 10:17:41,308:INFO:models/best_model_reg.pkl saved in current working directory
+2022-06-01 10:17:41,322:INFO:Pipeline(memory=None,
+         steps=[('dtypes',
+                 DataTypes_Auto_infer(categorical_features=[],
+                                      display_types=True,
+                                      features_todrop=['pickup_datetime',
+                                                       'dropOff_datetime',
+                                                       'SR_Flag',
+                                                       'dispatching_base_num',
+                                                       'Affiliated_base_number'],
+                                      id_columns=[], ml_usecase='regression',
+                                      numerical_features=[], target='duration',
+                                      time_features=[])),
+                ('imputer',
+                 Simple_Imputer(categorical_...
+                ('dummy', Dummify(target='duration')),
+                ('fix_perfect', Remove_100(target='duration')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select', 'passthrough'), ('fix_multi', 'passthrough'),
+                ('dfs', 'passthrough'), ('pca', 'passthrough'),
+                ['trained_model',
+                 AdaBoostRegressor(base_estimator=None, learning_rate=1.0,
+                                   loss='linear', n_estimators=50,
+                                   random_state=3584)]],
+         verbose=False)
+2022-06-01 10:17:41,323:INFO:save_model() successfully completed......................................
